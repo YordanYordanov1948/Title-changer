@@ -1,22 +1,12 @@
 import { useEffect, useState } from "react";
 
 export default function Title() {
-  const [count, setCount] = useState(1);
-
-  useEffect(() => {
-    document.title = `Count (${count})`;
-  }, [count]);
+  const [age, setAge] = useState(1);
+  const handleClick = () => setAge(age + 1);
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Click me
-      </button>
+      <button onClick={handleClick}>Count {age}</button>
     </div>
   );
 }
