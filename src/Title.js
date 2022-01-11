@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 export default function Title() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   useEffect(() => {
-    document.title = `You clicked ${count} times`;
+    document.title = `${count}`;
   }, [count]);
 
   return (
