@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function Title() {
-  const [count, setCount] = useState(1);
-
-  useEffect(() => {
-    document.title = count;
-  }, [count]);
+  const [count, setCount] = React.useState(1);
 
   return (
     <div>
