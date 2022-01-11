@@ -4,7 +4,7 @@ export default function Title() {
   const [count, setCount] = useState(1);
 
   useEffect(() => {
-    document.title = `${count}`;
+    document.title = count;
   }, [count]);
 
   return (
