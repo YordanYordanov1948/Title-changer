@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,6 +7,12 @@ function App() {
   const increseAndLog = () => {
     setCount(count + 1);
   };
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
   return (
     <div className="App">
       <section class="hero">
