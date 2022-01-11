@@ -1,17 +1,18 @@
-import { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-export default function Title() {
-  const [count, setCount] = useState(1);
+function Title() {
+  const [count, setCount] = useState(0);
 
+  const increseAndLog = () => {
+    setCount(count + 1);
+  };
   return (
     <div>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Count({count})
+      <button type="button" onClick={increseAndLog}>
+        Count {count}
       </button>
     </div>
   );
 }
+
+export default Title;
